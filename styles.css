@@ -36,7 +36,7 @@ a {
 
 .site-header,
 .site-footer {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -57,16 +57,18 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   font-weight: 900;
   letter-spacing: 0;
+  font-size: 1.08rem;
 }
 
 .brand img {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  box-shadow: 0 0 28px rgba(86, 222, 241, 0.2);
 }
 
 nav {
@@ -88,11 +90,11 @@ nav a:hover,
 }
 
 .hero {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 40px));
   min-height: calc(100vh - 124px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 380px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 390px);
   gap: 56px;
   align-items: center;
   padding: 34px 0 80px;
@@ -180,79 +182,40 @@ h3 {
   color: var(--text);
 }
 
-.phone-preview {
+.hero-phone {
   width: 100%;
-  min-height: 650px;
+  margin: 0;
+  aspect-ratio: 9 / 19.5;
   border: 1px solid rgba(180, 202, 225, 0.22);
   border-radius: 36px;
   background:
     linear-gradient(160deg, rgba(86, 222, 241, 0.08), transparent 42%),
     linear-gradient(180deg, #080d15, #02050b);
-  padding: 18px;
+  padding: 10px;
+  overflow: hidden;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
 }
 
-.phone-top {
-  width: 96px;
-  height: 22px;
-  margin: 0 auto 64px;
-  border-radius: 0 0 16px 16px;
-  background: #00040a;
-}
-
-.preview-panel {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 26px;
-  background: rgba(2, 5, 11, 0.72);
-}
-
-.small-label {
+.hero-phone img {
+  width: 100%;
+  height: 100%;
   display: block;
-  color: var(--cyan);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 28px;
 }
 
-.preview-panel strong {
-  display: block;
-  margin: 14px 0 24px;
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
-.metric-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.metric-grid span,
 .feature-grid article {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.035);
 }
 
-.metric-grid span {
-  min-height: 96px;
-  padding: 16px;
-  color: var(--muted);
-  font-weight: 800;
-}
-
-.metric-grid b {
-  display: block;
-  color: var(--text);
-  font-size: 1.2rem;
-}
-
 .content-band,
 .plain-section,
-.policy-page {
-  width: min(1120px, calc(100% - 40px));
+.policy-page,
+.screens-band {
+  width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -274,6 +237,63 @@ h3 {
 
 .feature-grid article {
   padding: 24px;
+}
+
+.screens-band {
+  padding: 78px 0;
+  border-top: 1px solid var(--line);
+}
+
+.screen-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.screen-card {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
+    rgba(4, 10, 17, 0.9);
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.28);
+}
+
+.screen-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.screen-card figcaption {
+  min-height: 152px;
+  padding: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.screen-card b,
+.screen-card span {
+  display: block;
+}
+
+.screen-card b {
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.15;
+}
+
+.screen-card span {
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 650;
+  line-height: 1.45;
 }
 
 .feature-grid p,
@@ -340,11 +360,16 @@ ul {
     padding-top: 48px;
   }
 
-  .phone-preview {
-    min-height: 520px;
+  .hero-phone {
+    width: min(390px, 100%);
+    justify-self: center;
   }
 
   .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .screen-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -378,7 +403,11 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .metric-grid {
+  .screen-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .screen-card {
+    max-width: 420px;
   }
 }
