@@ -246,12 +246,13 @@ h3 {
 
 .screen-gallery {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 22px;
   margin-top: 36px;
 }
 
 .screen-card {
+  grid-column: span 2;
   min-width: 0;
   margin: 0;
   border: 1px solid var(--line);
@@ -263,16 +264,24 @@ h3 {
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.28);
 }
 
+.screen-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.screen-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
 .screen-card img {
   width: 100%;
   display: block;
-  aspect-ratio: 9 / 19.5;
+  aspect-ratio: 9 / 15;
   object-fit: cover;
   object-position: top center;
 }
 
 .screen-card figcaption {
-  min-height: 152px;
+  min-height: 132px;
   padding: 18px;
   border-top: 1px solid var(--line);
 }
@@ -371,6 +380,12 @@ ul {
 
   .screen-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .screen-card,
+  .screen-card:nth-child(4),
+  .screen-card:nth-child(5) {
+    grid-column: auto;
   }
 }
 
