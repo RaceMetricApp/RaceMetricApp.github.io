@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#02050b" />
     <meta name="description" content="RaceMetric privacy policy." />
+    <link rel="canonical" href="https://racemetric.co.uk/privacy.html" />
     <title>Privacy Policy | RaceMetric</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/racemetric-icon.png" />
@@ -22,7 +24,7 @@
 
     <main class="policy-page">
       <section class="page-title">
-        <p class="eyebrow">Effective 25 June 2026</p>
+        <p class="eyebrow">Effective 14 August 2026</p>
         <h1>Privacy Policy</h1>
         <p class="lead">RaceMetric is a local-first karting, race-weekend, fitness, and driver-performance tracking app by JH43 Racing.</p>
       </section>
@@ -31,7 +33,7 @@
         <h2>Summary</h2>
         <p>
           RaceMetric is designed to work without an account. The app stores your driver, session, race-weekend,
-          logger, fitness, circuit, and settings data locally on your device.
+          logger, telemetry, session-note media, onboard video, fitness, circuit, and settings data locally on your device.
         </p>
         <p>
           RaceMetric does not currently use third-party advertising, third-party analytics, cross-app tracking,
@@ -42,6 +44,10 @@
           GitHub data feed. This keeps track profiles accurate without requiring an app update, and it does not
           upload your RaceMetric data.
         </p>
+        <p>
+          When event weather is enabled, RaceMetric sends the selected circuit coordinates and event date to
+          Open-Meteo to request a forecast. It does not send your name, session history, fitness data, or notes.
+        </p>
       </section>
 
       <section class="text-section">
@@ -49,13 +55,16 @@
         <p>RaceMetric may store information you enter or choose inside the app, including:</p>
         <ul>
           <li>Driver profile details, display preferences, dashboard logo, and driver image.</li>
-          <li>Kart sessions, lap times, logger import summaries, setup notes, kart class, tyres, pressures, gearing, engine details, conditions, and race results.</li>
+          <li>Kart sessions, lap and sector times, logger imports, telemetry, GPS traces, setup notes, kart class, tyres, pressures, gearing, engine details, conditions, and race results.</li>
           <li>Race weekends, planned sessions, reminders, notes, and checklist items.</li>
           <li>Circuit details, custom circuit locations, track notes, and circuit history.</li>
           <li>Simulator sessions.</li>
           <li>Workouts, weight entries, reaction-time history, step goal, and daily step display.</li>
           <li>Friend or rival names and comparison lap times when you choose to record them.</li>
-          <li>Local notification read state and reminder settings.</li>
+          <li>Session notebook entries and photos you choose to attach.</li>
+          <li>Onboard footage you choose to attach, plus the local synchronization point used to align it with logger data.</li>
+          <li>Engine runtime, rebuild targets, maintenance-alert state, local notification read state, and reminder settings.</li>
+          <li>Short-lived cached circuit weather forecasts.</li>
           <li>Coach videos or media you choose from your photo library.</li>
           <li>Full backup JSON files when you choose to export them.</li>
         </ul>
@@ -67,7 +76,8 @@
         <h3>Location</h3>
         <p>
           RaceMetric may ask for foreground location permission to help save circuit/session location context or
-          support nearby circuit features. RaceMetric does not use background location tracking.
+          support nearby circuit features. When event weather is enabled, coordinates for the selected circuit may
+          be sent to Open-Meteo to provide its forecast. RaceMetric does not use background location tracking.
         </p>
         <h3>Motion And Fitness</h3>
         <p>
@@ -76,18 +86,36 @@
         </p>
         <h3>Photo Library And Videos</h3>
         <p>
-          RaceMetric may ask for photo-library access so you can choose a dashboard logo, driver image, or coach video.
-          RaceMetric uses the media item you select and does not scan your full library.
+          RaceMetric may ask for photo-library access so you can choose a dashboard logo, driver image, coach video,
+          session-note photo, or onboard session footage. RaceMetric uses the media item you select and does not scan
+          your full library. Selected session photos and videos may be copied into RaceMetric's local app storage so
+          they remain attached to the saved session.
         </p>
         <h3>Files</h3>
         <p>
-          RaceMetric may open a document picker so you can import supported logger files, such as UniPro TSV exports.
-          The app reads the file you select so it can preview laps and create or update a RaceMetric session.
+          RaceMetric may open a document picker so you can import supported logger files, such as native UniPro .uni sessions and UniPro TSV/CSV exports.
+          The app reads the file you select so it can preview and store available laps, sectors, GPS, speed, RPM and
+          sensor channels, then create or update a RaceMetric session. A retained local copy may be used for later
+          session comparison and analysis.
         </p>
         <h3>Notifications</h3>
         <p>
           RaceMetric may ask for notification permission so it can schedule local reminders for race weekends and
-          planned sessions. These reminders are for app functionality, not advertising.
+          planned sessions, and one-time alerts for driver-set engine rebuild targets. These reminders and alerts are
+          for app functionality, not advertising.
+        </p>
+      </section>
+
+      <section class="text-section">
+        <h2>Onboard Video And Session Media</h2>
+        <p>
+          If you attach onboard footage, RaceMetric stores the selected video locally and saves the synchronization
+          point you choose. This lets the app display lap time, speed, RPM, delta and track position alongside the video.
+          RaceMetric does not upload the footage to a developer-operated server.
+        </p>
+        <p>
+          Session-note photos and coach reference videos are also stored locally. You can remove attached media from
+          the relevant session or coaching entry inside the app.
         </p>
       </section>
 
@@ -110,8 +138,21 @@
       </section>
 
       <section class="text-section">
+        <h2>Weather Forecasts</h2>
+        <p>
+          Event weather is optional and can be turned off in Setup. When enabled, RaceMetric requests forecast data
+          from Open-Meteo using the selected circuit coordinates and event date. Forecast responses are cached on
+          the device for a short period and may be included in local race-weekend reminders.
+        </p>
+        <p>
+          Open-Meteo receives the internet request, which may include network information such as an IP address.
+          Its handling of that request is governed by Open-Meteo's own privacy and service terms.
+        </p>
+      </section>
+
+      <section class="text-section">
         <h2>Data Collection And Tracking</h2>
-        <p>RaceMetric does not currently send your RaceMetric data to a developer-operated server.</p>
+        <p>RaceMetric does not send your saved RaceMetric records to a developer-operated server.</p>
         <p>RaceMetric does not sell personal data.</p>
         <p>RaceMetric does not use third-party advertising SDKs.</p>
         <p>RaceMetric does not use third-party analytics SDKs.</p>
@@ -122,8 +163,8 @@
         <h2>Data Deletion</h2>
         <p>
           You can edit or delete many entries inside RaceMetric. Removing the app from your device may also remove
-          locally stored RaceMetric data. If you have exported a backup or shared data outside the app, you are
-          responsible for managing those copies.
+          locally stored RaceMetric data, imported logger files, session photos, and attached videos. If you have
+          exported a backup or shared data outside the app, you are responsible for managing those copies.
         </p>
       </section>
 

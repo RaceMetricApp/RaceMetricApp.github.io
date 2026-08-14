@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#02050b" />
     <meta name="description" content="RaceMetric support and contact details." />
+    <link rel="canonical" href="https://racemetric.co.uk/support.html" />
     <title>Support | RaceMetric</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/racemetric-icon.png" />
@@ -46,19 +48,40 @@
         <h2>Common Help</h2>
         <h3>My data is missing</h3>
         <p>
-          RaceMetric stores data locally on your device. If the app is deleted, device data is wiped, or a TestFlight
-          build is replaced, local data may be removed. Use Setup > Export full backup before changing devices or
-          reinstalling where possible.
+          RaceMetric stores data locally on your device. Installing an update normally keeps that data, but deleting
+          the app, wiping the device, or reinstalling can remove it. Use Setup &gt; Export full backup before changing
+          devices or reinstalling where possible.
         </p>
         <h3>Logger import does not read my file</h3>
         <p>
-          RaceMetric currently supports UniPro TSV exports. Other logger formats, including Alfano, may need a sample
-          file before support can be mapped safely.
+          RaceMetric supports native UniPro .uni sessions and UniPro TSV/CSV exports. Depending on the channels in the
+          selected file, an import can include lap and sector times, GPS, speed, RPM, temperature, steering, battery and
+          acceleration data. Logger formats and firmware exports can vary, so contact support with a sample if a valid
+          file is not recognised.
+        </p>
+        <h3>Why is some telemetry unavailable?</h3>
+        <p>
+          RaceMetric only displays channels that are present and usable in the selected logger file. Lap times may be
+          available even when GPS, RPM, sectors or other sensors were not recorded. The theoretical lap uses valid
+          logger sector times when they are available.
+        </p>
+        <h3>How do session comparisons work?</h3>
+        <p>
+          Open a saved session with logger data and choose Compare with another session. RaceMetric offers compatible
+          sessions from the same circuit, then aligns the selected laps by track position so their racing lines,
+          sectors and available telemetry can be inspected together.
+        </p>
+        <h3>My onboard video will not open</h3>
+        <p>
+          RaceMetric copies selected onboard footage into its local app storage so it remains attached to the session.
+          Large files need enough free device space. If the original import was interrupted or the local file is no
+          longer available, use Replace to attach the video again.
         </p>
         <h3>Why does RaceMetric ask for location?</h3>
         <p>
-          Location is optional and is used for circuit/session location features. RaceMetric does not use background
-          location tracking.
+          Location is optional and is used for circuit/session location features. When event weather is enabled,
+          RaceMetric sends the selected circuit coordinates and event date to Open-Meteo for a forecast. RaceMetric
+          does not use background location tracking.
         </p>
         <h3>Why does RaceMetric ask for Motion & Fitness?</h3>
         <p>
@@ -67,11 +90,14 @@
         </p>
         <h3>Why does RaceMetric ask for photo-library access?</h3>
         <p>
-          Photo-library access is optional and is used when you choose a dashboard logo, driver image, or coach video.
+          Photo-library access is optional and is used when you choose a dashboard logo, driver image, coach video,
+          session-note photo, or onboard session footage. RaceMetric only uses the item you select.
         </p>
         <h3>Why does RaceMetric ask for notifications?</h3>
         <p>
-          Notifications are optional and are used for local race-weekend and planned-session reminders.
+          Notifications are optional and are used for local race-weekend and planned-session reminders, plus one-time
+          alerts when an engine reaches a rebuild target set by the driver. Event and session reminders may include the
+          latest available daily or hourly circuit forecast when event weather is enabled.
         </p>
       </section>
 

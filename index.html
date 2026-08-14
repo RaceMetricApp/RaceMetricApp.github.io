@@ -3,78 +3,167 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#02050b" />
     <meta
       name="description"
-      content="RaceMetric is a local-first karting logbook for sessions, race weekends, circuits, fitness, setup notes, and driver progress."
+      content="RaceMetric is a local-first karting app for race-weekend planning, UniPro logger imports, lap and sector analysis, telemetry comparison, onboard video, setup notes, engine life, fitness, and driver progress."
     />
-    <title>RaceMetric</title>
+    <link rel="canonical" href="https://racemetric.co.uk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RaceMetric" />
+    <meta property="og:title" content="RaceMetric | Karting data, telemetry and race prep" />
+    <meta
+      property="og:description"
+      content="Plan the weekend, analyse every lap, and remember the setup that worked."
+    />
+    <meta property="og:url" content="https://racemetric.co.uk/" />
+    <meta property="og:image" content="https://racemetric.co.uk/assets/racemetric-icon.png" />
+    <title>RaceMetric | Karting data, telemetry and race prep</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/racemetric-icon.png" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="RaceMetric home">
         <img src="assets/racemetric-icon.png" alt="" />
         <span>RaceMetric</span>
       </a>
       <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#app-preview">Preview</a>
         <a href="privacy.html">Privacy</a>
         <a href="support.html">Support</a>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Karting logbook and race prep</p>
+          <p class="eyebrow">Karting data · telemetry · race prep</p>
           <h1>RaceMetric</h1>
+          <p class="hero-statement">Plan the weekend. Analyse every lap. Remember what worked.</p>
           <p class="lead">
-            A focused driver app for kart sessions, race weekends, circuit notes,
-            logger imports, fitness work, and season progress.
+            One focused place for race calendars, kart setup, UniPro logger data,
+            lap comparison, onboard replay, engine life, fitness, and season progress.
           </p>
           <p class="maker">Created by JH43 Racing.</p>
           <div class="actions">
-            <a class="button primary" href="support.html">Get support</a>
-            <a class="button secondary" href="privacy.html">Read privacy policy</a>
+            <a class="button primary" href="#features">Explore RaceMetric</a>
+            <a class="button secondary" href="support.html">Get support</a>
+          </div>
+          <div class="hero-proof" aria-label="RaceMetric highlights">
+            <span>Local-first</span>
+            <span>No account required</span>
+            <span>Built around real race weekends</span>
           </div>
         </div>
         <figure class="hero-phone" aria-label="RaceMetric app preview">
           <img
             src="assets/screenshots/home-dashboard.png"
-            alt="RaceMetric home dashboard showing driver rating, prep status, and latest session"
+            alt="RaceMetric home dashboard showing driver rating, preparation status, and latest session"
           />
         </figure>
       </section>
 
-      <section class="content-band">
+      <section class="content-band" id="features">
         <div class="section-heading">
-          <p class="eyebrow">Built for karting</p>
-          <h2>Useful before, during, and after a race weekend.</h2>
+          <p class="eyebrow">From calendar to chequered flag</p>
+          <h2>The detail a driver and race team actually need.</h2>
+          <p class="section-intro">
+            RaceMetric connects preparation, setup memory and logger analysis so useful information
+            does not disappear between sessions.
+          </p>
         </div>
         <div class="feature-grid">
           <article>
-            <h3>Session records</h3>
-            <p>Log circuits, lap times, conditions, kart class, tyres, pressures, setup notes, and race results.</p>
+            <p class="feature-number">01 / PLAN</p>
+            <h3>Race-weekend calendar</h3>
+            <p>Build events and planned sessions with checklists, reminders, daily forecasts and session-specific hourly weather.</p>
           </article>
           <article>
-            <h3>Race-weekend planning</h3>
-            <p>Keep planned sessions, reminders, event notes, and checklists together before you arrive.</p>
+            <p class="feature-number">02 / RECORD</p>
+            <h3>Complete session logbook</h3>
+            <p>Keep circuit, kart, tyres, pressures, gearing, conditions, results, setup changes, notes and photos together.</p>
           </article>
           <article>
-            <h3>Track atlas</h3>
-            <p>Use circuit guides, saved locations, track records, and personal session history in one place.</p>
+            <p class="feature-number">03 / IMPORT</p>
+            <h3>UniPro logger support</h3>
+            <p>Import native .uni sessions and TSV/CSV exports for lap times, sectors, GPS, speed, RPM and available sensor channels.</p>
           </article>
           <article>
-            <h3>Local-first data</h3>
-            <p>RaceMetric works without an account and stores your app data on your device.</p>
+            <p class="feature-number">04 / ANALYSE</p>
+            <h3>Lap and sector analysis</h3>
+            <p>Review every lap, theoretical pace, trends, racing lines and synchronized telemetry at the exact point on track.</p>
+          </article>
+          <article>
+            <p class="feature-number">05 / COMPARE</p>
+            <h3>Session comparison</h3>
+            <p>Compare saved sessions, laps, sectors, GPS lines and telemetry with clear current and reference traces.</p>
+          </article>
+          <article>
+            <p class="feature-number">06 / MANAGE</p>
+            <h3>Engine and driver progress</h3>
+            <p>Track engine runtime and rebuild targets alongside track records, season statistics, fitness and reaction training.</p>
           </article>
         </div>
       </section>
 
-      <section class="screens-band" aria-labelledby="screens-title">
+      <section class="analysis-band" aria-labelledby="analysis-title">
+        <div class="analysis-copy">
+          <p class="eyebrow">Telemetry that stays connected to the track</p>
+          <h2 id="analysis-title">See where the lap was won—or left behind.</h2>
+          <p>
+            Scrub or play through a lap while the cursor moves across the telemetry graph and GPS trace.
+            Compare another saved lap at the same track position, then zoom in to inspect the racing line.
+          </p>
+          <ul class="check-list">
+            <li>Speed, RPM, temperature, steering and available G-force channels</li>
+            <li>Logger sectors, elapsed time and live time delta</li>
+            <li>0.5×, 1× and 2× synchronized lap playback</li>
+            <li>Onboard video aligned with lap, telemetry and track position</li>
+          </ul>
+          <p class="availability-note">Available detail depends on the channels recorded in the selected logger file.</p>
+        </div>
+        <figure class="analysis-screen">
+          <img
+            src="assets/screenshots/session-telemetry.png"
+            alt="RaceMetric synchronized lap comparison showing GPS racing lines, live track cursors, speed, RPM and time delta"
+            loading="lazy"
+          />
+          <figcaption>Synchronized lap trace and comparison</figcaption>
+        </figure>
+      </section>
+
+      <section class="workflow-band" aria-labelledby="workflow-title">
+        <div class="section-heading">
+          <p class="eyebrow">A repeatable race-weekend workflow</p>
+          <h2 id="workflow-title">Prepare. Run. Learn. Repeat.</h2>
+        </div>
+        <div class="workflow-grid">
+          <article>
+            <span>Before</span>
+            <h3>Arrive ready</h3>
+            <p>Use the calendar, weather, reminders and event checklist to keep the weekend organised.</p>
+          </article>
+          <article>
+            <span>At the circuit</span>
+            <h3>Capture the setup</h3>
+            <p>Record pressures, gearing, tyres, notes and photos while the detail is still fresh.</p>
+          </article>
+          <article>
+            <span>After the session</span>
+            <h3>Turn data into progress</h3>
+            <p>Import logger data, compare laps and sessions, review video, and carry the lesson into the next run.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="screens-band" id="app-preview" aria-labelledby="screens-title">
         <div class="section-heading">
           <p class="eyebrow">App preview</p>
-          <h2 id="screens-title">The details are easy to find when the day gets busy.</h2>
+          <h2 id="screens-title">Fast to read when the paddock gets busy.</h2>
         </div>
         <div class="screen-gallery">
           <figure class="screen-card">
@@ -85,18 +174,18 @@
             />
             <figcaption>
               <b>Kart sessions</b>
-              <span>Lap history, setup memory, conditions, and logger imports.</span>
+              <span>Lap history, setup memory, conditions, logger imports and session notes.</span>
             </figcaption>
           </figure>
           <figure class="screen-card">
             <img
               src="assets/screenshots/race-calendar.png"
-              alt="Race calendar dashboard with event reminders and planned sessions"
+              alt="Race calendar dashboard with event reminders, weather and planned sessions"
               loading="lazy"
             />
             <figcaption>
               <b>Race weekends</b>
-              <span>Events, reminders, planned sessions, and checklists.</span>
+              <span>Events, forecasts, reminders, planned sessions and checklists.</span>
             </figcaption>
           </figure>
           <figure class="screen-card">
@@ -107,7 +196,7 @@
             />
             <figcaption>
               <b>Track atlas</b>
-              <span>Circuit layouts, profile notes, sectors, and location data.</span>
+              <span>Circuit layouts, profile notes, records, sectors and location data.</span>
             </figcaption>
           </figure>
           <figure class="screen-card">
@@ -118,7 +207,7 @@
             />
             <figcaption>
               <b>Progress stats</b>
-              <span>Lap trends, best times, season summaries, and track focus.</span>
+              <span>Lap trends, engine life, rebuild targets, season summaries and track focus.</span>
             </figcaption>
           </figure>
           <figure class="screen-card">
@@ -129,21 +218,28 @@
             />
             <figcaption>
               <b>Fitness support</b>
-              <span>Workouts, daily movement, weight tracking, and reaction prep.</span>
+              <span>Workouts, daily movement, weight tracking and reaction preparation.</span>
             </figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="plain-section">
+      <section class="plain-section local-first">
         <div>
-          <p class="eyebrow">Public reference data</p>
-          <h2>Track record updates without app updates.</h2>
+          <p class="eyebrow">Local-first by design</p>
+          <h2>Your race data stays with you.</h2>
         </div>
-        <p>
-          RaceMetric can download a read-only public track-record feed hosted on GitHub. It does not upload
-          user-created sessions, logger files, photos, profile data, fitness data, or location data.
-        </p>
+        <div>
+          <p>
+            RaceMetric works without an account and stores sessions, logger data, notes, photos,
+            onboard footage, fitness entries and preferences on the device. Backup and sharing happen only when you choose them.
+          </p>
+          <p>
+            The app may download read-only track-record data and request optional Open-Meteo forecasts.
+            It does not upload your saved RaceMetric records to a developer-operated account system.
+          </p>
+          <a class="text-link" href="privacy.html">Read the full privacy policy →</a>
+        </div>
       </section>
     </main>
 
