@@ -131,6 +131,17 @@ nav a:hover,
   color: var(--cyan);
 }
 
+nav .nav-hub {
+  padding: 7px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--cyan);
+}
+
+nav .nav-hub:hover {
+  background: rgba(86, 222, 241, 0.1);
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--amber);
